@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Painting List View Controller-->
         <scene sceneID="hed-cl-ffl">
             <objects>
-                <viewController id="Iaj-rS-aFB" sceneMemberID="viewController">
+                <viewController id="Iaj-rS-aFB" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lo0-w1-rtG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="292" id="cJh-tA-IaD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="292" id="cJh-tA-IaD" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJh-tA-IaD" id="StE-X3-UhR">
@@ -37,9 +37,16 @@
                                                     <rect key="frame" x="192" y="192" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Like"/>
+                                                    <connections>
+                                                        <action selector="likeButtonTappedAction:" destination="cJh-tA-IaD" eventType="touchUpInside" id="Xnv-c6-RUe"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButtonTapped" destination="mxd-cK-m6a" id="Ide-EQ-P4R"/>
+                                            <outlet property="paintingImage" destination="TjO-By-zfO" id="9Mp-FS-Rgi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
