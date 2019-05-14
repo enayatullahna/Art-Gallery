@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol PaintingTableViewCellDelegate: class {
-    func likeButtonTap (on ell:
+    func likeButtonTap (on cell:
         PaintingTableViewCell)
 }
 class PaintingTableViewCell: UITableViewCell {
