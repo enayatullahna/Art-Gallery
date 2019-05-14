@@ -29,19 +29,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="291.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjO-By-zfO">
-                                                    <rect key="frame" x="87" y="28" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-cK-m6a">
-                                                    <rect key="frame" x="192" y="192" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Like"/>
-                                                    <connections>
-                                                        <action selector="likeButtonTappedAction:" destination="cJh-tA-IaD" eventType="touchUpInside" id="Xnv-c6-RUe"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="DfI-Tp-wVx">
+                                                    <rect key="frame" x="40" y="19" width="334" height="254"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TjO-By-zfO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="188"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-cK-m6a">
+                                                            <rect key="frame" x="0.0" y="224" width="334" height="30"/>
+                                                            <state key="normal" title="Like"/>
+                                                            <connections>
+                                                                <action selector="likeButtonTappedAction:" destination="cJh-tA-IaD" eventType="touchUpInside" id="Xnv-c6-RUe"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DfI-Tp-wVx" firstAttribute="top" secondItem="StE-X3-UhR" secondAttribute="topMargin" constant="8" id="S68-s1-qRW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DfI-Tp-wVx" secondAttribute="bottom" constant="8" id="TQh-WH-i7y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DfI-Tp-wVx" secondAttribute="trailing" constant="20" id="VJg-6e-ypa"/>
+                                                <constraint firstItem="DfI-Tp-wVx" firstAttribute="leading" secondItem="StE-X3-UhR" secondAttribute="leadingMargin" constant="20" id="pr8-la-uKs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="likeButtonTapped" destination="mxd-cK-m6a" id="Ide-EQ-P4R"/>
