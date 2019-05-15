@@ -17,7 +17,7 @@ class PaintingController {
     }
     
     func loadPaintingFromAssets() {
-        for x in 1...12 { // selcet images between 1 to 12 at the assets
+        for x in 1...12 { // selcet images between 1 to 12 at the assets.
             let image: String = "Image\(x)"
             guard let UIImage = UIImage(named: image) else {return}
             let painting = Painting(image: UIImage)

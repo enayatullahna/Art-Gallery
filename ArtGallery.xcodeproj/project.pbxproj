@@ -62,12 +62,36 @@
 			children = (
 				E6C38798228B2C6B0073343A /* Storyboard */,
 				E6C38797228B2C570073343A /* Resources */,
-				E6C38799228B2E1C0073343A /* Painting.swift */,
-				E6C3879B228B2EB80073343A /* PaintingController.swift */,
+				E6BE747E228BA2100001E797 /* Model */,
+				E6BE747F228BA21F0001E797 /* Model Controller */,
+				E6BE747D228BA1FD0001E797 /* View Controller */,
+			);
+			path = ArtGallery;
+			sourceTree = "<group>";
+		};
+		E6BE747D228BA1FD0001E797 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
 				E6C3879D228B31B90073343A /* PaintingTableViewCell.swift */,
 				E6C3879F228B34800073343A /* PaintingListViewController.swift */,
 			);
-			path = ArtGallery;
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		E6BE747E228BA2100001E797 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6C38799228B2E1C0073343A /* Painting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6BE747F228BA21F0001E797 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6C3879B228B2EB80073343A /* PaintingController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 		E6C38797228B2C570073343A /* Resources */ = {
